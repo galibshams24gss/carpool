@@ -1,0 +1,30 @@
+
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Assign Vehicle</h3>
+</div>
+<div class="modal-body" id="modal-body">
+	<h4>Search Vehicle Rego</h4>
+	<fieldset class="form-group col-xs-12">
+        <input type="text" ng-model="search" class="form-control mb-2" autocomplete="off" placeholder="Search Rego" id="rego" name="rego"
+        	 uib-typeahead="vehicleLists as vehicleLists.rego for vehicleLists in $ctrl.vehicleLists | filter:{rego:$viewValue} | limitTo:8" />
+    	<button class="btn btn-small btn-outline-primary mb-2" type="button" ng-click="$ctrl.searchRego(search.rego)">Search</button>
+    </fieldset>
+<!-- {{$ctrl.vehicleLists}} -->
+	<div ng-show="$ctrl.details">
+	    <h4>Vehicle Detail</h4>
+		<div class="list-group" ng-repeat="vehicle in $ctrl.vehicleLists | filter:$ctrl.rego:true">
+			<a href="#" class="list-group-item list-group-item-action">
+				Make : {{vehicle.make}}
+			</a>
+			<a href="#" class="list-group-item list-group-item-action">Model : {{vehicle.model}}</a>
+			<a href="#" class="list-group-item list-group-item-action">Vehicle Type : {{vehicle.type}}</a>
+			<a href="#" class="list-group-item list-group-item-action">Primary Location : {{vehicle.vehicle_primary_location.address}}</a>
+		</div>
+	</div>
+    <!-- Selected: <b>{{ $ctrl.selected.item }}</b> -->
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="$ctrl.assignVehicle(search, 'normal')" ng-disabled="($ctrl.vehicleLists|filter:$ctrl.rego:true).length != 1">Assign</button>
+    <button class="btn btn-primary" type="button" ng-click="$ctrl.assignVehicle(search, 'again')" ng-disabled="($ctrl.vehicleLists|filter:$ctrl.rego:true).length != 1">Assign and Add Another</button>
+    <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Close</button>
+</div>

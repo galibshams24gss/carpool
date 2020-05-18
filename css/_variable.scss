@@ -1,0 +1,134 @@
+// 1.3 Breakpoints
+// 2.3 COLOUR
+// 2.5 Typography
+// 2.6 Typography hierarchy
+// 2.7 Type on colour
+// 2.10 Tables
+// 2.11 Buttons
+// 2.12 Links
+// 2.14 Form elements
+// 2.16 Desktop A features 
+//  (carousel)
+// 2.18 B and C features
+// 3.1 Navigation components
+// 3.2 Desktop masthead
+// 3.3 Mega nav
+// 3.4 Search
+// 3.5 Mobile navigation
+// 3.6 Mobile masthead
+// 3.7 Mobile navigation measurements
+// 3.8 Optional notification bar
+// 3.9 Footer
+// 3.13 Internal page - Navigation
+// 3.14 Internal page - feature tiles 
+
+
+// 1.3 Breakpoints
+// BP1 - Smartphone 320 - 599 px 10 px column padding.  12 columns forming 2 primary columns.
+// BP2 - Small Tablet Portrait 600 - 767 px 20 px column padding.  12 columns forming 2 primary columns.
+// BP3 - Tablet Portrait /  Small Tablet Landscape 768 - 977 px 20 px column padding,  forming 12 primary columns.
+// BP4 - Small Desktop /  Tablet Landscape 978 - 1139 px 20 px column padding,  forming 12 primary columns.
+// BP5 - Large Desktop + /  Tablet Landscape + 1140 px + 20 px column padding,  forming 12 primary columns.
+
+// Small screen / tablet
+//** Deprecated `$screen-sm` as of v3.0.1
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+//** Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet:              $screen-sm-min !default;
+
+// Medium screen / desktop
+//** Deprecated `$screen-md` as of v3.0.1
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+//** Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop:             $screen-md-min !default;
+
+// Large screen / wide desktop
+//** Deprecated `$screen-lg` as of v3.0.1
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg !default;
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-lg-desktop:          $screen-lg-min !default;
+
+
+// 2.3 COLOUR
+
+// Primary colours
+$footer:#413537;
+$crimson:#990033;
+$white:#fff;
+$black:#262223;
+$orange:#ff5c5e;
+
+$green: #00FF00;
+$light-blue:#cdddf7;
+$light-grey:#eeeeee;
+
+//Highlight colours
+$white-high:$white;
+$red:#ff0033;
+
+// Secondary colours
+$red-academy:$red;
+$purple:#663399;
+$teal:#006699;
+
+// Tertiary colours
+$crimson-30:#e1b4af;
+$crimson-15:#f0d7d6;
+$purple-30:#cdb9d7;
+$purple-15:#e6dceb;
+$teal-30:#82b4c8;
+$teal-15:#f0d7d6;
+$purple-vibe:#ff0033;
+
+// background colours
+$white-off:#f2f2f2;
+$grey-lgtest:#eaebea;
+$grey-lgt:#c4c2c3;
+$grey-mid:#898687;
+$grey-dk:#3a3537;
+$grey:#b1aeae;
+$grey-link:#eee;
+
+$white-bg:$white;
+$white-off-bg:$white-off;
+$grey-lgtest-bg:$grey-lgtest;
+$grey-lgt-bg:$grey-lgt;
+$grey-mid-bg:$grey-mid;
+$grey-dk-bg:$grey-dk;
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  // src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}

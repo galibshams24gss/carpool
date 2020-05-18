@@ -1,0 +1,51 @@
+<!-- Modal -->
+
+<!-- <div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Upload Image</h3>
+</div>
+<div class="modal-body" id="modal-body">
+    <form name="form.formImage" id="form-image">
+        <div class="row">
+            <div class="col">
+                <input type="file" class="form-control" id="fileImage" name="fileImage" ng-model="formImageData.fileImage" img-upload onchange="angular.element(this).scope().showImageFunction()">
+                <img ng-src="{{image}}" height="100" width="100" ng-if="showImage"/>
+            </div>
+        </div>
+      </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="$ctrl.submitformImage(image)">OK</button>
+    <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Close</button>
+</div> -->
+
+
+
+<div class="modal fade" id="upload-image-modal" tabindex="-1" role="dialog" aria-labelledby="uploadImageLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="uploadImageLabel">Upload Image</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form name="form.formImage" id="form-image">
+        <div class="row">
+            <div class="col">
+                <input type="file" class="form-control" id="fileImage" name="fileImage" ng-model="formImageData.fileImage" img-upload onchange="angular.element(this).scope().showImageFunction()">
+                <img ng-src="{{image}}" height="100" width="100" ng-if="showImage"/>
+            </div>
+        </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" ng-click="submitformImage(image)" ng-disabled="form.formImage.$invalid">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
